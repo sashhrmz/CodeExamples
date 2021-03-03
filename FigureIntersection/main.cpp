@@ -8,7 +8,7 @@ class Point {
 public:
     Point(int64_t x, int64_t y) : x_(x), y_(y) {}
 
-    bool operator<(const Point& poinTest) const {
+    bool operator<(const Point& point) const {
         return (x_ < point.x_) || (x_ == point.x_ && y_ < point.y_);
     }
 
@@ -118,6 +118,6 @@ int main() {
 
     bool is_intersect = first_figure.IsIntersect(second_figure);
 
-    std::cout << is_intersect;
+    std::cout << (is_intersect ? "Intersects" : "Do not intersects");
     return 0;
 }
